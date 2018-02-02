@@ -1,8 +1,8 @@
 <!--pages/sky_idx/sky_idx.wxml-->
-<text class='my_text_1' >pages/sky_idx/sky_idx.wxml</text>
+<text class='my_text_1'>pages/sky_idx/sky_idx.wxml</text>
 
 <view>
-  <text class='{{css1_var}}' catchtap='skyClickText1' >hello, this is sky_idx.wxml</text>
+  <text class='{{css1_var}}' catchtap='skyClickText1'>hello, this is sky_idx.wxml</text>
 </view>
 
 <view class='container_avatar'>
@@ -22,5 +22,8 @@
 </view>
 
 <view bindtap='select_db_info'>
-  <text>查询数据库</text>
+  <text>查询数据库\n</text>
+  <block wx:for="{{user_info_list}}" wx:for-item="user_info_item">
+    <text class="log-item">{{index + 1}}. name={{user_info_item.name}} mid={{user_info_item.mid}} age={{user_info_item['age']}} \n</text>
+  </block>
 </view>

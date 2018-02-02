@@ -147,7 +147,8 @@ Page({
     })
   },
 
-  select_db_info: function(){
+  select_db_info: function () {
+    var that = this
     wx.request({
       url: 'https://www.d.stardan.cn/select/',
       data: {
@@ -155,14 +156,17 @@ Page({
         count: 5,
       },
       header: {
-        'Cookie':'session_key_username='+'skyLittleSoft',
+        'Cookie': 'session_key_username=' + 'skyLittleSoft',
       },
-      success: function(res){
-        console.log('select db ok...json='+JSON.stringify(res.data))
-        for (var k in res.data.user_info_list){
-          console.log(k + '=======>' + res.data.user_info_list[k].name+
+      success: function (res) {
+        console.log('select db ok...json=' + JSON.stringify(res.data))
+        for (var k in res.data.user_info_list) {
+          console.log(k + '=======>' + res.data.user_info_list[k].name +
             '===>' + res.data.user_info_list[k]['mid'] + '===>' + res.data['user_info_list'][k].age)
         }
+        that.setData({
+          user_info_list: res.data.user_info_list
+        })
       }
     })
   },
