@@ -8,7 +8,7 @@ Page({
   data: {
     css1_var: "my_css_1",
     userInfoVar: {},
-    myPhone: {'k1': 'v1'},
+    myPhone: { 'k1': 'v1' },
   },
 
   /**
@@ -100,23 +100,23 @@ Page({
   skyClickText1: function () {
     var now_date = new Date();
     console.log('你点击了文字' + now_date.toLocaleString());
-    if (this.data.css1_var=='my_css_1') {
+    if (this.data.css1_var == 'my_css_1') {
       this.data.css1_var = 'my_css_2';
     } else {
       this.data.css1_var = 'my_css_1';
     }
-    color_flag=!color_flag;
-    console.log('color='+this.data.css1_var);
+    color_flag = !color_flag;
+    console.log('color=' + this.data.css1_var);
     this.setData({
       css1_var: this.data.css1_var
     });
   },
 
-  get_system_info_func: function() {
-    var that=this
+  get_system_info_func: function () {
+    var that = this
     var myPhoneVar = this.data.myPhone
     wx.getSystemInfo({
-      success: function(res) {
+      success: function (res) {
         console.log(res.model)
         console.log(res.platform)
         console.log(myPhoneVar)
@@ -130,7 +130,24 @@ Page({
 
   },
 
+  get_name_hello_func: function () {
+    wx.request({
+      url: 'https://www.d.stardan.cn/name/skyname/',
+      method: 'GET',
+      success: function (res) {
+        console.log('res.data===' + res.data) //[object Object]
+        for (var k in res.data) {   //字典的打开方式
+          console.log(k + "===>" + res.data[k])
+        }
+        if (res.data.status_code == 0) {
+          console.log('get url ok...')
+          console.log('content=' + res.data.data + '\t extra=' + JSON.stringify(res.data.extra))  //或者json方式打开
+        }
+      }
+    })
+  },
+
 })
 
-var color_flag=true;
+var color_flag = true;
 

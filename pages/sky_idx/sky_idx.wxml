@@ -15,3 +15,8 @@
 <view bindtap='get_system_info_func'>
   <text> 手机型号: {{myPhone.model}}</text>
 </view>
+
+
+<view bindtap='get_name_hello_func'>
+  <text>touch to get name</text>
+</view>
