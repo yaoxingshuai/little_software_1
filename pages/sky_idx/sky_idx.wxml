@@ -20,3 +20,7 @@
 <view bindtap='get_name_hello_func'>
   <text>touch to get name</text>
 </view>
+
+<view bindtap='select_db_info'>
+  <text>查询数据库</text>
+</view>

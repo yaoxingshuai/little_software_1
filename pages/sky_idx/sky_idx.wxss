@@ -1,15 +1,22 @@
 /* pages/sky_idx/sky_idx.wxss */
 
-.my_text_1{
+.my_text_1 {
   color: rebeccapurple;
   font: italic;
   background-color: yellowgreen;
 }
 
-.my_css_1{
+.my_css_1 {
   color: blue;
 }
-.my_css_2{
+
+.my_css_2 {
   color: green;
 }
 
+.userinfo_avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}

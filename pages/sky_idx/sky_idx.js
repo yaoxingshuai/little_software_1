@@ -147,6 +147,26 @@ Page({
     })
   },
 
+  select_db_info: function(){
+    wx.request({
+      url: 'https://www.d.stardan.cn/select/',
+      data: {
+        offset: 3,
+        count: 5,
+      },
+      header: {
+        'Cookie':'session_key_username='+'skyLittleSoft',
+      },
+      success: function(res){
+        console.log('select db ok...json='+JSON.stringify(res.data))
+        for (var k in res.data.user_info_list){
+          console.log(k + '=======>' + res.data.user_info_list[k].name+
+            '===>' + res.data.user_info_list[k]['mid'] + '===>' + res.data['user_info_list'][k].age)
+        }
+      }
+    })
+  },
+
 })
 
 var color_flag = true;
