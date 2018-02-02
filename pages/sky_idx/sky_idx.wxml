@@ -1,0 +1,17 @@
+<!--pages/sky_idx/sky_idx.wxml-->
+<text class='my_text_1' >pages/sky_idx/sky_idx.wxml</text>
+
+<view>
+  <text class='{{css1_var}}' catchtap='skyClickText1' >hello, this is sky_idx.wxml</text>
+</view>
+
+<view class='container_avatar'>
+  <view bindtap='bindTapFunc1' class='userInfoCls'>
+    <image class='userinfo_avatar' src='{{userInfoVar.avatarUrl}}' background-size='cover'></image>
+    <text class='userinfo_nickname'>{{userInfoVar.nickName}}</text>
+  </view>
+</view>
+
+<view bindtap='get_system_info_func'>
+  <text> 手机型号: {{myPhone.model}}</text>
+</view>

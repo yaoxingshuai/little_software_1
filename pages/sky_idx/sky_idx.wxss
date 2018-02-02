@@ -1,0 +1,15 @@
+/* pages/sky_idx/sky_idx.wxss */
+
+.my_text_1{
+  color: rebeccapurple;
+  font: italic;
+  background-color: yellowgreen;
+}
+
+.my_css_1{
+  color: blue;
+}
+.my_css_2{
+  color: green;
+}
+
