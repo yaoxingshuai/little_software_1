@@ -27,3 +27,8 @@
     <text class="log-item">{{index + 1}}. name={{user_info_item.name}} mid={{user_info_item.mid}} age={{user_info_item['age']}} \n</text>
   </block>
 </view>
+
+
+<view bindtap='feed_page_func'>
+  <text>跳转到feed页</text>
+</view>

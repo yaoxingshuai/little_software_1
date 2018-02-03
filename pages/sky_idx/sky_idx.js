@@ -170,7 +170,11 @@ Page({
       }
     })
   },
-
+  feed_page_func: function(){
+    wx.navigateTo({
+      url: '../feed_list/feed_list'
+    })
+  },
 })
 
 var color_flag = true;

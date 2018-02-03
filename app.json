@@ -1,8 +1,11 @@
 {
   "pages": [
+    
     "pages/sky_idx/sky_idx",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/feed_list/feed_list"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
